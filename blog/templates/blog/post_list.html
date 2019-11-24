@@ -1,23 +1,213 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Django Girls blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portal | Droupotal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/leaflet.css"/>
+    <script src="js/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
 </head>
+
+<style>
+#mapid{
+    height: 450px;
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/image1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+/*Top nav bar start*/
+.navigation{
+background-color: rgb(35, 133, 133);
+height: 100px;
+}
+.navigation nav{
+    width: 100%;
+    height: 12vh;
+}
+.navigation nav img{
+    position: relative;
+    height: 100px;
+    width: 150px;
+}
+.navigation nav ul{
+    margin-top: 30px;
+    float: right;
+    list-style: none;
+}
+.navigation nav ul li{
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 40px;
+}
+.navigation nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 10;
+}
+.navigation nav{
+    margin-left: 5px;
+}
+.bacground-image img{
+    height: 500px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*Top nav bar end*/
+.Brand-name{
+    color: saddlebrown;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*footer nav bar start*/
+.footer{
+background-color: rgb(91, 133, 35);
+height: 150px;
+margin-bottom: 0%;
+}
+.footer nav{
+    width: 100%;
+    height: 12vh;
+}
+.footer nav img{
+    position: relative;
+    height: 100px;
+    width: 150px;
+}
+.footer nav ul{
+    margin-right: 25%;
+    float: right;
+    list-style: none;
+}
+.footer nav ul li{
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 40px;
+}
+.footer nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 10;
+}
+.footer nav{
+    margin-left: 5px;
+}
+.footer h4{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+footer{
+    margin-bottom: 0px;
+}
+/*footer nav bar end*/
+</style>
 <body>
-<div>
-<h1><a href="">Django Girls Blog</a></h1>
-</div>
-<div>
-<p>published: 14.06.2014, 12:14</p>
-<h2><a href="">My first post</a></h2>
-<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi po
-rta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum mass
-a justo sit amet risus.</p>
-</div>
-<div>
-<p>published: 14.06.2014, 12:14</p>
-<h2><a href="">My second post</a></h2>
-<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi po
-rta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-</div>
+        <!--start of navigation bar-->
+        <div class="navigation" id="navbar">
+        
+            <nav>
+                <img src="img/logo.png" alt="">
+                <ul>
+        
+                    <li><a href="Index.html">Home</a></li>
+                    
+                    <li><a href="portal.html">Portal</a></li>
+
+                    <li><a href="portal2.html">Population</a></li>
+                    
+                    <li><a href="about.html">About</a></li>
+                    
+                    <li><a href="contact.html">Contact us</a></li>
+                    
+                    <li><a href="login.html">Login</a></li>
+        
+                </ul>
+        
+            </nav>
+        
+        </div>
+        <!--End of heading-->
+
+        <div id="mapid">
+
+            
+
+        </div>
+
+        <footer>
+            <div class="footer">
+                <nav>
+                    <ul>
+                        <li><a href="">Twitter</a></li>
+        
+                        <li><a href="">Facebook</a></li>
+        
+                        <li><a href="">Instagram</a></li>
+        
+                        <li><a href="">Youtube</a></li>
+        
+                        <li><a href="">LinkedIn</a></li>
+        
+                        <li><a href="">Gitgub</a></li>
+                    </ul>
+                </nav>
+                <center>
+                    <h4>© 2019 Drouportal | Designedby:<a href="">MarxCode</a></h4>
+                </center>
+            </div>
+        
+        </footer>
+        
+        <script>
+            var map = L.map('mapid').setView([-0.39999, 37.148198], 10);
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">Marcode|solutions</a> contributors'
+                }).addTo(map);
+
+               var marker= L.marker([-0.39999,37.148198]).bindPopup('Nyeri County').openPopup().addTo(map);
+                
+
+            var wmsLayers = L.tileLayer.wms("http://localhost:8081/geoserver/percel/wms?",{
+
+                        layers: ["percel:land_parcel",], format: 'image/png',
+
+                       // layers: ["workspace name:name of the data", "layer2", "layer3", "nyeri_agriculture", "towns", "nyeri_county_adm",], format: 'image/png',
+                        transparent: true, visibility: false,
+                    }).addTo(map);
+            var wmsLayers = L.tileLayer.wms("http://localhost:8081/geoserver/percel/wms?", {
+
+                    layers: ["percel:Ken_Roads_Google",], format: 'image/png',
+
+                    // layers: ["workspace name:name of the data", "layer2", "layer3", "nyeri_agriculture", "towns", "nyeri_county_adm",], format: 'image/png',
+                    transparent: true, visibility: false,
+                }).addTo(map);
+                
+        </script>
 </body>
 </html>
